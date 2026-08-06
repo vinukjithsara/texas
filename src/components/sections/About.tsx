@@ -2,9 +2,7 @@ import { Flame, Award, Users2 } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Reveal from '@/components/ui/Reveal';
 import { SITE } from '@/data/site';
-
-const ABOUT_IMAGE =
-  'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=1200&q=80';
+import aboutImage from '@/assets/texas8.webp';
 
 const STATS = [
   { icon: Flame, value: '10+', label: 'Years of Flavor' },
@@ -19,8 +17,8 @@ export default function About() {
         <Reveal className="relative order-2 lg:order-1">
           <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] border border-white/10 sm:mx-0 mx-auto">
             <img
-              src={ABOUT_IMAGE}
-              alt="Inside TEXAS Restaurant"
+              src={aboutImage}
+              alt="TEXAS Restaurant signage, Maharagama"
               loading="lazy"
               className="h-full w-full object-cover"
             />

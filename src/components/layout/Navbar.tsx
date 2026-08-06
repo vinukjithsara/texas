@@ -36,7 +36,7 @@ export default function Navbar() {
       )}
     >
       <Container className="flex h-18 items-center justify-between py-4">
-        <Logo />
+        <Logo size={46} />
 
         <nav className="hidden items-center gap-9 lg:flex">
           {NAV_LINKS.map((link) => (

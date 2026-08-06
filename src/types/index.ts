@@ -20,7 +20,7 @@ export interface GalleryImage {
   id: string;
   src: string;
   alt: string;
-  span?: 'row-span-2' | 'col-span-2';
+  className?: string;
 }
 
 export interface Testimonial {

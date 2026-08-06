@@ -1,43 +1,56 @@
 import type { GalleryImage } from '@/types';
 
-// Demo gallery — replace with real interior/food photography.
+import texas1 from '@/assets/texas1.webp';
+import texas2 from '@/assets/texas2.webp';
+import texas3 from '@/assets/texas3.webp';
+import texas4 from '@/assets/texas4.webp';
+import texas5 from '@/assets/texas5.webp';
+import texas6 from '@/assets/texas6.webp';
+import texas7 from '@/assets/texas7.webp';
+
+// Real photos from TEXAS Restaurant, Maharagama.
+// texas4 is the featured centerpiece — kept large and centered in the grid.
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
-    id: 'interior-1',
-    src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80',
-    alt: 'Warm restaurant dining room',
-    span: 'row-span-2',
+    id: 'texas-1',
+    src: texas1,
+    alt: 'Grilled platter with sides at TEXAS Restaurant',
+    className: 'lg:[grid-column:1] lg:[grid-row:1/3]',
   },
   {
-    id: 'bar',
-    src: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80',
-    alt: 'Restaurant bar with ambient lighting',
+    id: 'texas-2',
+    src: texas2,
+    alt: 'Fried noodles topped with a fried egg',
+    className: 'lg:[grid-column:4] lg:[grid-row:1/3]',
   },
   {
-    id: 'plated-steak',
-    src: 'https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=900&q=80',
-    alt: 'Plated grilled steak',
+    id: 'texas-3',
+    src: texas3,
+    alt: 'Nasi goreng special served table-side',
+    className: 'lg:[grid-column:1] lg:[grid-row:3]',
   },
   {
-    id: 'chef',
-    src: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80',
-    alt: 'Chef preparing a dish',
-    span: 'row-span-2',
+    id: 'texas-4',
+    src: texas4,
+    alt: "TEXAS Restaurant's signature bottle wall",
+    className: 'col-span-2 row-span-2 lg:[grid-column:2/4] lg:[grid-row:1/3]',
   },
   {
-    id: 'tables',
-    src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80',
-    alt: 'Elegant table setting',
-    span: 'col-span-2',
+    id: 'texas-5',
+    src: texas5,
+    alt: 'Live band performing at TEXAS Restaurant',
+    className: 'lg:[grid-column:2] lg:[grid-row:3]',
   },
   {
-    id: 'pasta-dish',
-    src: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=900&q=80',
-    alt: 'Plated pasta dish',
+    id: 'texas-6',
+    src: texas6,
+    alt: 'Fried rice served on the outdoor patio',
+    className: 'lg:[grid-column:3] lg:[grid-row:3]',
   },
   {
-    id: 'interior-2',
-    src: 'https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=900&q=80',
-    alt: 'Modern restaurant interior',
+    id: 'texas-7',
+    src: texas7,
+    alt: 'Illuminated TEXAS Restaurant signage at night',
+    className: 'lg:[grid-column:4] lg:[grid-row:3]',
   },
 ];

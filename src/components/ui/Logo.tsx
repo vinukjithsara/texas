@@ -1,23 +1,27 @@
-import { Flame } from 'lucide-react';
+import logoMark from '@/assets/logo.jpg';
 import { SITE } from '@/data/site';
 import { cn } from '@/lib/utils';
 
 interface LogoProps {
   className?: string;
+  size?: number;
 }
 
-// Placeholder logo mark — swap for the restaurant's real logo file/SVG later.
-export default function Logo({ className }: LogoProps) {
+export default function Logo({ className, size = 48 }: LogoProps) {
   return (
     <a
       href="#home"
-      className={cn('flex items-center gap-2.5 font-display text-xl font-bold text-cream', className)}
+      aria-label={SITE.name}
+      className={cn('flex items-center', className)}
     >
-      <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-ember-500 to-flame-600 text-white shadow-md shadow-flame-600/30">
-        <Flame size={18} strokeWidth={2.5} />
-      </span>
-      {SITE.shortName}
-      <span className="text-gradient">.</span>
+      <img
+        src={logoMark}
+        alt={`${SITE.name} logo`}
+        width={size}
+        height={size}
+        className="rounded-full ring-1 ring-white/10 shadow-md shadow-flame-600/20"
+        style={{ height: size, width: size }}
+      />
     </a>
   );
 }

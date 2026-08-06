@@ -17,11 +17,11 @@ export const SITE = {
     'Bold, fire-kissed flavors served in the heart of Maharagama — where every plate is cooked low, slow, and loud.',
 
   contact: {
-    // Demo values — swap for the restaurant's real line & inbox.
-    phone: '+94 76 123 4567',
-    phoneDisplay: '076 123 4567',
+    phone: '+94 11 284 4644',
+    phoneDisplay: '011 284 4644',
+    // Demo value — swap for the restaurant's real inbox.
     email: 'hello@texasrestaurant.lk',
-    whatsapp: '94761234567',
+    whatsapp: '94112844644',
   },
 
   location: {

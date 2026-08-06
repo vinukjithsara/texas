@@ -11,7 +11,7 @@ interface GalleryItemProps {
 
 export default function GalleryItem({ image, delay = 0, onClick }: GalleryItemProps) {
   return (
-    <Reveal delay={delay} className={cn('h-full', image.span)}>
+    <Reveal delay={delay} className={cn('h-full', image.className)}>
       <button
         type="button"
         onClick={onClick}
