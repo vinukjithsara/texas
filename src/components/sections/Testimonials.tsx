@@ -1,6 +1,7 @@
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import TestimonialCard from '@/components/ui/TestimonialCard';
+import RatingSummary from '@/components/ui/RatingSummary';
 import { TESTIMONIALS } from '@/data/testimonials';
 
 export default function Testimonials() {
@@ -11,9 +12,12 @@ export default function Testimonials() {
           eyebrow="Customer Reviews"
           title="Loved By Our Guests"
           description="Don't just take our word for it — here's what regulars keep coming back for."
+          className="mb-12"
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <RatingSummary />
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {TESTIMONIALS.map((testimonial, i) => (
             <TestimonialCard key={testimonial.id} testimonial={testimonial} delay={(i % 4) * 0.1} />
           ))}

@@ -19,7 +19,7 @@ export default function Logo({ className, size = 48 }: LogoProps) {
         alt={`${SITE.name} logo`}
         width={size}
         height={size}
-        className="rounded-full ring-1 ring-white/10 shadow-md shadow-flame-600/20"
+        className="rounded-full ring-1 ring-white/10 shadow-md shadow-flame-600/20 transition-transform duration-300 hover:scale-105"
         style={{ height: size, width: size }}
       />
     </a>

@@ -23,11 +23,14 @@ export default function Hero() {
   return (
     <section id="home" className="relative flex min-h-[100svh] items-center overflow-hidden bg-ink">
       <div className="absolute inset-0">
-        <img
+        <motion.img
           src={HERO_IMAGE}
           alt="Signature dish at TEXAS Restaurant"
           className="h-full w-full object-cover"
           fetchPriority="high"
+          initial={{ scale: 1.12 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 8, ease: [0.16, 1, 0.3, 1] }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/70 to-ink" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/30 to-ink/70" />
@@ -46,10 +49,10 @@ export default function Hero() {
         <motion.div variants={container} initial="hidden" animate="show" className="max-w-2xl">
           <motion.div
             variants={item}
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-ember-300 backdrop-blur-sm"
+            className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-ember-300 backdrop-blur-sm sm:text-xs sm:tracking-[0.25em]"
           >
-            <Star size={13} className="fill-ember-400 text-ember-400" />
-            Maharagama&apos;s Fire-Grilled Favorite
+            <Star size={13} className="shrink-0 fill-ember-400 text-ember-400" />
+            <span>Maharagama&apos;s Fire-Grilled Favorite</span>
           </motion.div>
 
           <motion.h1
@@ -72,20 +75,23 @@ export default function Hero() {
             </Button>
           </motion.div>
 
-          <motion.div variants={item} className="mt-14 flex items-center gap-8 border-t border-white/10 pt-8">
-            <div>
-              <p className="font-display text-2xl font-bold text-cream">10+</p>
-              <p className="text-xs uppercase tracking-wider text-muted">Years Serving</p>
+          <motion.div
+            variants={item}
+            className="mt-14 grid grid-cols-3 gap-4 border-t border-white/10 pt-8 sm:flex sm:items-center sm:gap-8"
+          >
+            <div className="min-w-0">
+              <p className="font-display text-xl font-bold text-cream sm:text-2xl">10+</p>
+              <p className="text-[10px] uppercase tracking-wider text-muted sm:text-xs">Years Serving</p>
             </div>
-            <div className="h-9 w-px bg-white/10" />
-            <div>
-              <p className="font-display text-2xl font-bold text-cream">4.8/5</p>
-              <p className="text-xs uppercase tracking-wider text-muted">Guest Rating</p>
+            <div className="hidden h-9 w-px bg-white/10 sm:block" />
+            <div className="min-w-0">
+              <p className="font-display text-xl font-bold text-cream sm:text-2xl">4.8/5</p>
+              <p className="text-[10px] uppercase tracking-wider text-muted sm:text-xs">Guest Rating</p>
             </div>
-            <div className="h-9 w-px bg-white/10" />
-            <div>
-              <p className="font-display text-2xl font-bold text-cream">30+</p>
-              <p className="text-xs uppercase tracking-wider text-muted">Signature Dishes</p>
+            <div className="hidden h-9 w-px bg-white/10 sm:block" />
+            <div className="min-w-0">
+              <p className="font-display text-xl font-bold text-cream sm:text-2xl">30+</p>
+              <p className="text-[10px] uppercase tracking-wider text-muted sm:text-xs">Signature Dishes</p>
             </div>
           </motion.div>
         </motion.div>

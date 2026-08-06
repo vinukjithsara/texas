@@ -1,12 +1,10 @@
 import type { LucideIcon } from 'lucide-react';
 
-export interface Dish {
+export interface MenuCategory {
   id: string;
   name: string;
   description: string;
-  price: string;
   image: string;
-  tag?: string;
 }
 
 export interface Feature {

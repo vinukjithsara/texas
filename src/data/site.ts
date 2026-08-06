@@ -43,4 +43,14 @@ export const SITE = {
     tiktok: 'https://tiktok.com',
     twitter: 'https://x.com',
   },
+
+  // Real Google rating for TEXAS Restaurant, Maharagama — update as it changes.
+  reviews: {
+    rating: 4.4,
+    count: 117,
+  },
 } as const;
+
+export function getWhatsAppLink(message: string) {
+  return `https://wa.me/${SITE.contact.whatsapp}?text=${encodeURIComponent(message)}`;
+}

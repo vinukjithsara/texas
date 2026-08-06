@@ -4,11 +4,11 @@ import { cn } from '@/lib/utils';
 type Variant = 'primary' | 'secondary' | 'ghost';
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-wide transition-all duration-300 px-7 py-3.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ink';
+  'inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-wide transition-all duration-300 px-7 py-3.5 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ink active:scale-95';
 
 const variants: Record<Variant, string> = {
   primary:
-    'bg-gradient-to-r from-ember-500 to-flame-600 text-white shadow-lg shadow-flame-600/25 hover:shadow-xl hover:shadow-flame-600/40 hover:-translate-y-0.5 active:translate-y-0',
+    'bg-gradient-to-r from-ember-500 to-flame-600 text-white shadow-lg shadow-flame-600/25 hover:shadow-xl hover:shadow-flame-600/40 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0',
   secondary:
     'border border-cream/25 text-cream bg-white/[0.03] backdrop-blur-sm hover:bg-white/10 hover:border-cream/40 hover:-translate-y-0.5 active:translate-y-0',
   ghost: 'text-cream/80 hover:text-ember-400',
